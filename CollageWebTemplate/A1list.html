@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .divbody {
+        margin-top: 15px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    .container {
+        /* border: 3px solid rgb(5, 36, 87); */
+        /* border-top-left-radius: 15px solid rgb(5, 5, 44); */
+        /* border-top-right-radius: 15px solid rgb(9, 9, 61); */
+        border-bottom: 2px solid rgb(247, 247, 247);
+        display: flex;
+        /* float: left;  */
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 20%;
+        padding-top: 60px;
+        background-color: rgb(156, 201, 241);
+    }
+    
+    .head {
+        font-size: 34px;
+        font: inherit;
+        padding-top: 100px;
+        padding-bottom: 10px;
+    }
+    
+    .logo1 {
+        padding-right: 10px;
+        padding-bottom: 50px;
+        border-radius: 20px;
+    }
+    
+    .logo2 {
+        padding-left: 10px;
+        padding-bottom: 50px;
+        width: 200px;
+    }
+    
+    nav {
+        display: flex;
+        float: left;
+        width: 100%;
+        margin: 0 auto;
+        background: rgb(5, 36, 87);
+        padding: 30pxpx 20;
+        color: aliceblue;
+        box-shadow: 0px 5px 0px #dedede;
+    }
+    
+    .main {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .dropdown {
+        list-style: none;
+        text-align: center;
+        position: relative;
+        line-height: 30px;
+    }
+    
+    .cursor {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 800;
+        /* text-transform: uppercase; */
+        margin: 0px 15px;
+        transition: 1s;
+    }
+    /* nav ul li a {
+        margin: 0px 15px;
+        text-decoration: none;
+        font-weight: 500px;
+        transition: 1s;
+    } */
+    
+    .cursor:hover {
+        color: rgb(15, 1, 1);
+        background-color: whitesmoke;
+        border-radius: 4px;
+        display: block;
+        padding: 5px;
+        text-transform: uppercase;
+        margin: 10px 10px;
+        transition: 1s;
+    }
+    /* nav ul li a:hover {
+        color: rgb(15, 1, 1);
+        background-color: whitesmoke;
+        border-radius: 4px;
+    } */
+    
+    .dropdown-content {
+        list-style: none;
+        text-align: left;
+        position: relative;
+        line-height: 50px;
+        opacity: 0;
+        position: absolute;
+        /* transition: all 0.5s ease; */
+        margin-top: 1rem;
+        left: 14px;
+        display: none;
+        visibility: hidden;
+    }
+    
+    .dropdown-content li {
+        list-style: none;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        float: left;
+        position: relative;
+        /* line-height: 30px; */
+        width: 100%;
+        margin-left: 2px;
+        padding-left: 5rem;
+        background: rgb(5, 36, 87);
+        /* padding: 5px 5px 5px 5px; */
+    }
+    
+    ul li:hover>ul,
+    ul li:focus-within>ul,
+    ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        padding: 0px;
+        margin: 0px;
+        display: block;
+    }
+    
+    .dropdown-content li a {
+        list-style: none;
+        color: aliceblue;
+        text-decoration: none;
+    }
+    
+    .dropdown-content li a:hover {
+        color: rgb(15, 1, 1);
+        border-bottom: 3px rgb(240, 237, 237);
+        background-color: whitesmoke;
+        border-radius: 4px;
+        display: block;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 5px 5px;
+        /* transition: 1s; */
+    }
+    
+    .container2 {
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 0px;
+        margin-left: 5px;
+        margin-right: 5px;
+        /* border: 3px solid rgb(5, 36, 87); */
+        /* background-color: #bdbe72; */
+    }
+    
+    .Alpha {
+        background-image: url(https://cache.careers360.mobi/media/colleges/reviews/2020/3/27/96870/440px-Gcoeara_aeria.jpg);
+        width: 100%;
+        height: 90vh;
+        /* border: 3px solid rgb(5, 36, 87); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: animate 16s ease-in-out infinite;
+    }
+    
+    @keyframes animate {
+        0%,
+        100% {
+            background-image: url(https://schoolbook.getmyuni.com/assets/images/rev_img/60579__28653/1517945262IMG-20170916-WA0026.jpg);
+        }
+        10% {
+            background-image: url(https://avatars.githubusercontent.com/u/48626101?v=4);
+        }
+        20% {
+            background-image: url(https://www.gcoeara.ac.in/images/gallery/gymkhana/gymkhana15.jpg);
+        }
+        30% {
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Gcoeara.jpg/440px-Gcoeara.jpg);
+        }
+        40% {
+            background-image: url(https://www.gcoeara.ac.in/images/mainpage/10.jpg);
+        }
+        50% {
+            background-image: url(https://gcoearapune.files.wordpress.com/2018/02/screenshot-from-2018-02-06-19-12-15.png?w=300);
+        }
+        60% {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK1Ri5O6rM6aABJbiigrJFImQz8zerohfSxQ&usqp=CAU);
+        }
+        70% {
+            background-image: url(https://nssgcoeara.files.wordpress.com/2017/11/21231940_1280413302086303_3485109785396455070_n.jpg?w=960&h=600&crop=1);
+        }
+        80% {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUknjcuWGnQbV2-njHYOPvlE4gIDQATRtqOQ&usqp=CAU);
+        }
+        90% {
+            background-image: url(https://rrlgcoeara.in/images/2020.jpg);
+        }
+        100% {
+            background-image: url(https://www.gpawasari.ac.in/images/Five.JPG);
+        }
+    }
+    
+    .main1 {
+        margin: 2%;
+    }
+    
+    .card {
+        width: 20%;
+        display: inline-block;
+        box-shadow: 2px 2px 20px black;
+        border-radius: 5px;
+        margin: 2%;
+    }
+    
+    .image img {
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    
+    .title {
+        text-align: center;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    .des {
+        padding: 3px;
+        text-align: center;
+        padding-top: 10px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    
+    button {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    
+    button:hover {
+        background-color: black;
+        color: white;
+        transition: .5s;
+        cursor: pointer;
+    }
+    
+    .footer {
+        background-color: rgb(131, 127, 127);
+        text-align: center;
+        margin: 0px 5px 5px 5px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        /* border: 3px solid rgb(5, 36, 87); */
+    }
+</style>
+
+<body>
+    <div class="divbody">
+
+        <div class="container">
+            <img src="https://www.gcoeara.ac.in/images/govt-college-logo.png" alt="" class="logo1">
+
+            <h2><b class=" head"> Government Collage of Engineering Reaseach, Awasari (Kh.)
+            </b> <br>
+                <p style="text-align: center
+            ;">Taluka-Ambegaon, Distric-Pune,412420</p>
+                शासकीय अभियात्रिकी व संशोधन महाविद्यालय अवसरी(खुर्द)
+                <p style="text-align: center">तालुका-आंबेगाव, जिल्हा-पुणे, 412420</p>
+            </h2><br>
+
+
+            <img src="https://www.gcoeara.ac.in/images/govt-logo.png" alt="" class="logo2">
+        </div>
+
+        <nav class="navbar">
+
+            <div class="navbar-collapse collapse">
+                <ul class="main" style=" text-align: left;">
+                    <li class="dropdown"><a class="cursor">Home</a></li>
+
+                    <li class="dropdown"><a class="cursor">About</a>
+                        <ul class="dropdown-content" style=" text-align: left;">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Organisational Structure</a></li>
+
+                            <li><a href="#">Office Staff</a></li>
+                            <li><a href="#">NBA </a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a class="cursor">Programs</a>
+                        <ul class="dropdown-content" style=" text-align: left;">
+                            <li> <a href="#">Automobile Engineering</a></li>
+                            <li> <a href="#">Civil Engineering</a></li>
+                            <li> <a href="#">Computer Engineering</a></li>
+                            <li> <a href="#">Electrical Engineering</a></li>
+                            <li> <a href="#">E&TC Engineering</a></li>
+                            <li> <a href="#">Information Technology</a></li>
+                            <li> <a href="#">Mechanical Engineering</a></li>
+                            <li> <a href="#">Science & Humanities</a></li>
+                            <li> <a href="#">Workshop</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"> <a class="cursor">Student Section</a>
+                        <ul class="dropdown-content" style=" text-align: left;">
+                            <li><a href="#">Admission Details</a></li>
+                            <li><a href="#" target="_blank">Fee Structure</a></li>
+                            <li><a href="#">Online Fees Payment</a></li>
+                            <li><a href="#">Vidya Lakshmi Portal</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"> <a class="cursor">Facilities</a>
+                        <ul class="dropdown-content" style=" text-align: left;">
+                            <li><a href="#">Hostel</a></li>
+                            <li><a href="#">Gymkhana</a></li>
+                            <li><a href="#">Library</a></li>
+                            <li><a href="#" target="_blank">Facilities </a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"> <a class="cursor">Alumni</a>
+                        <ul class="dropdown-content" style=" text-align: left;">
+                            <li><a href="#">Alumni Home</a></li>
+                            <li><a href="#" target="_blank">Alumni Registration</a></li>
+                            <li><a href="#" target="_blank">Alumni Events</a></li>
+                            <li><a href="#" target="_blank">Alumni Committee</a></li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class="dropdown"> <a class="cursor">Training & Placement</a>
+                        <ul class="dropdown-content" style=" text-align: left;">
+                            <li><a href="#">T&P Cell</a></li>
+                            <li><a href="#">Placement Details</a></li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="dropdown"><a class="cursor">Gallery</a></li>
+                    <li class="dropdown"><a class="cursor">Downloads</a></li>
+                    <li class="dropdown"><a class="cursor">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="Alpha">
+            <!-- <img src="https://cache.careers360.mobi/media/colleges/reviews/2020/3/27/96870/440px-Gcoeara_aeria.jpg" alt="" style=" width: 100%;
+            height: 70vh; border-radius: 5px;"> -->
+        </div>
+        <br><br>
+
+        <div class="container2">
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <h2 style="text-align: center; background-color: #dedede; padding-top: 20px;padding-bottom: 20px;"> Welcome To Government Collage of Engineering Reaseach, Awasari</h2>
+
+
+            <P style="background-color: #dedede;  padding-right: 20px;padding-left: 20px; margin-top: 0px;">
+
+                Government College of Engineering & Research, Avasari Khurd, established in June 2009, by Government of Maharashtra, with an aim to spread technical education in the rural parts of Maharashtra in order to produce technically strong manpower by providing
+                world class facilities and state-of-the-art infrastructure.
+                <br><br> At present college offers six degree courses:
+            </P>
+            <br>
+            <div style="background-color:#dedede;  padding-top: 20px;padding-bottom: 20px;">
+                <h3 style=" margin-left: 30px; margin-right: 50px;">
+                    Computer Engineering
+                </h3>
+                <p style=" margin-left:60px; margin-right: 60px; ">
+                    The Computer Engineering department was established in 2009. The department has a student level organization name COMPSA organizes a different program. The department also has a club called Hackathon Club started in 2018
+                </p> <br><br>
+                <hr>
+                <h3 style=" margin-left: 30px; margin-right: 50px;">
+                    Mechanical Engineering
+                </h3>
+                <p style=" margin-left: 60px;margin-right: 60px; ">
+                    The Mechanical Engineering department was established in 2009. The department has a student level organization name COMPSA organizes a different program. The department also has a club called Hackathon Club started in 2018
+                </p> <br><br>
+                <hr>
+                <h3 style=" margin-left: 30px; margin-right: 50px;">
+                    Civil Engineering
+                </h3>
+                <p style=" margin-left: 60px; margin-right: 60px; ">
+                    This department started in 2010. Students qualify for GATE and other competitive examinations like MPSC, IES, etc. Many students win prizes at national technical events
+                </p> <br><br>
+                <hr>
+                <h3 style=" margin-left: 30px; margin-right: 50px;">
+                    Electronics and Telecommunications Engineering
+                </h3>
+                <p style=" margin-left: 60px; margin-right: 60px;">
+                    The department of Electronics and Telecommunication was established in the 2009-2010 academic year. The student organization ETSA works for students. E-Yantra is a student group that participated in the IIT Bombay competition. Also regular workshops and
+                    seminars are carried out.
+                </p> <br><br>
+                <hr>
+                <h3 style=" margin-left: 30px; margin-right: 50px;">
+                    Automotive Engineering
+                </h3>
+                <p style=" margin-left: 60px; margin-right: 60px;">
+                    The department of Automotive Engineering was started in academic year 2009-2010. A separate full-fledged Vehicle Maintenance and Testing laboratory was developed. laboratories like I.C. Engine, Metrology & Quality Control, Vehicle Maintenance Practices,
+                    CAD and Emission Control are availabl
+                </p>
+                <br><br>
+                <hr>
+                <h3 style=" margin-left: 30px; margin-right: 50px;">
+                    Instrumentation and Control
+                </h3>
+                <p style=" margin-left: 60px; margin-right: 60px;">
+                    The department of Instrumentation and Control was established in the 2009-2010 or the 2010-2011 academic year. This department has a student organization, workshop and seminars
+                </p>
+
+            </div>
+
+            <div class="main1">
+
+                <!--cards -->
+
+                <div class="card">
+
+                    <div class="image">
+                        <img src="https://www.gcoeara.ac.in/images/PANGAVHANE.jpg">
+                    </div>
+                    <div class="title">
+                        <h1> Mr Dr. D. R. Pangavhane
+                        </h1>
+                    </div>
+                    <div class="des">
+                        <p> Principal(In charge) of Government Collage of Engineering Reaseach, Awasari</p>
+                        <button>Read More...</button>
+                    </div>
+                </div>
+                <!--cards -->
+
+
+                <div class="card">
+
+                    <div class="image">
+                        <img src="https://www.gpawasari.ac.in/images/Min.PNG">
+                    </div>
+                    <div class="title">
+                        <h1>
+                            Mr. Uday Samant</h1>
+                    </div>
+                    <div class="des">
+                        <p>Minister, Higher & Technical Education, Maharashtra.</p>
+                        <button>Read More...</button>
+                    </div>
+                </div>
+                <!--cards -->
+
+                <div class="card">
+
+                    <div class="image">
+                        <img src="https://www.gcoeara.ac.in/images/PANGAVHANE.jpg">
+                    </div>
+                    <div class="title">
+                        <h1> Mr Dr. D. R. Pangavhane
+                        </h1>
+                    </div>
+                    <div class="des">
+                        <p> Principal(In charge) of Government Collage of Engineering Reaseach, Awasari</p>
+                        <button>Read More...</button>
+                    </div>
+                </div>
+                <!--cards -->
+                <div class="card">
+
+                    <div class="image">
+                        <img src="https://www.gpawasari.ac.in/images/Min.PNG">
+                    </div>
+                    <div class="title">
+                        <h1>
+                            Mr. Uday Samant</h1>
+                    </div>
+                    <div class="des">
+                        <p>Minister, Higher & Technical Education, Maharashtra.</p>
+                        <button>Read More...</button>
+                    </div>
+                </div>
+                <!--cards -->
+
+
+
+
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer">
+                <div class="copyright">Copyright &copy; GCOEAR, Avasari Khurd</div>
+                <a href="https://www.instagram.com/_cultural_club/?hl=en" target="blank"><img src="https://blog.hootsuite.com/wp-content/uploads/2018/09/glyph-logo_May2016-150x150.png" alt="" style="height: 30px; width:30px"></a>
+                <a href="https://mobile.twitter.com/gcoearavasari" target="blank"><img src="https://blog.hootsuite.com/wp-content/uploads/2018/09/Twitter_Logo_WhiteOnBlue-150x150.png" alt="" style="height: 30px; width:30px"></a>
+                <a href="https://in.linkedin.com/company/gcoeara" target="blank"><img src="https://blog-assets.hootsuite.com/wp-content/uploads/2018/09/In-2C-54px-R.png" alt="" style="height:30px; width:30px"></a>
+                <a href="https://www.youtube.com/watch?v=NNINfVMcqLU" target="blank"><img src="https://blog.hootsuite.com/wp-content/uploads/2018/09/yt_icon_rgb-310x219.png" alt="" style="height: 30px; width:30px"></a>
+                <a href="https://www.facebook.com/gcoear/" target="blank"><img src="https://blog-assets.hootsuite.com/wp-content/uploads/2018/09/f-ogo_RGB_HEX-58.png" alt="" style="height: 30px; width:30px"></a>
+            </div>
+
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
